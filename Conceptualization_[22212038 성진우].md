@@ -1,12 +1,14 @@
-# 1. Conceptualization
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/443869a1-1237-4577-920e-bb6cc9635c3f" /># 1. Conceptualization
 
 ## Project Title
 Creation Time
 
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/495abca5-12ba-4492-b353-d19c9a71695a" />
+
 ## Student Info
-- Student No: 
+- Student No: 22212038
 - Name: 성진우
-- E-mail: 
+- E-mail: wlsdn4271@naver.com
 
 ---
 
@@ -50,6 +52,9 @@ Creation Time
 # 2. System Context Diagram
 
 ## 기능 목록
+
+<img width="558" height="354" alt="image" src="https://github.com/user-attachments/assets/2cc3a721-2354-432d-8d5f-cbc08fe16c65" />
+
 
 | 기능 | 설명 |
 |------|------|
