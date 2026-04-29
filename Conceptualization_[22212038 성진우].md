@@ -66,10 +66,10 @@ Creation Time
 | Managing Team | 팀원 관리 |
 | Creating Vote | 투표 생성 |
 | Participating Vote | 투표 참여 |
-| Reading Vote Result | 투표 결과 확인 |
+| Viewing Vote Result | 투표 결과 확인 |
 | Creating Schedule | 일정 등록 |
 | Writing Post | 게시글 작성 |
-| Reading Post | 게시글 확인 |
+| Viewing Post | 게시글 확인 |
 | Exporting Data | 엑셀로 데이터 내보내기 |
 
 ---
