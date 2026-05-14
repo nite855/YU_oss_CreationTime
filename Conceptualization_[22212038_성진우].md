@@ -20,7 +20,8 @@ Creation Time
 | 2026.04.28 | 1.1.0 | use case 수정 및 오타 수정, 패널티 점수 추가 | 성진우 |
 | 2026.04.29 | 1.2.0 | Actor 재정의 | 성진우 |
 | 2026.05.01 | 1.3.0 | use case 수정 및 삭제, 수정 use case 추가 | 성진우 |
-| 2026.05.03 | 1.4.0 | use case 수정 | 성진우 | 
+| 2026.05.03 | 1.4.0 | use case 수정 | 성진우 |
+| 2026.05.14 | 1.5.0 | Viewing Schedule 추가 | 성진우 |  
 ---
 
 ## Contents
@@ -71,6 +72,7 @@ Creation Time
 | Participating Vote | 투표 참여 |
 | Viewing Vote Result | 투표 결과 확인 |
 | Creating Schedule | 일정 등록 |
+| Viewing Schedule | 일정 조회 |
 | Writing Post | 팀 게시글 작성 |
 | Viewing Post | 팀 게시글 확인 |
 | Writing Comment | 팀 게시글에 댓글 작성 |
@@ -133,11 +135,13 @@ Creation Time
 | TeamLeader | 팀에 들어온 Application 목록을 확인하고 신청을 수락한다. 각 지원자에 대해 세부 정보를 확인할 수 있으며 승인 또는 거절을 통해 팀원을 선정할 수 있다. 승인된 사용자는 팀페이지에 접근 할 수 있다. |
 
 ## 8) Changing Role
+
 | Actor | Description |
 |------|-------------|
 | TeamLeader | 팀 리더는 팀에 소속된 팀원들에게 특정 역할(예: 서버, UI 디자인, 부팀장, 서기 등)을 부여하거나 기존 역할을 수정할 수 있다. 수정된 역할은 시스템의 팀 정보에 반영된다. |
 
 ## 9) Dismissing Team Member
+
 | Actor | Description |
 |------|-------------|
 | TeamLeader | 팀 리더는 특정 팀원을 팀에서 제외시킬 수 있다. 팀원 제외 시 해고 사유를 선택해야 하며, 불건전 사유에 해당할 경우 시스템은 해당 사용자에게 패널티 점수(Penalty Score)를 부과하여 상태에 영향을 줄 수 있다. |
@@ -166,72 +170,79 @@ Creation Time
 |------|-------------|
 | TeamLeader | 팀페이지에 존재하는 캘린더에 일정을 등록한다. 캘린더에 라인 형태로 표시되며, 하단부에 정리된 형태로 표시한다. |
 
-## 14) Writing Post
+## 14) Viewing Schedule
+
+| Actor | Description |
+|------|-------------|
+| TeamUser | 팀 페이지의 캘린더 또는 일정 목록에서 특정 일정을 선택하여 상세 정보를 조회한다. 선택된 일정은 강조 표시되며, 하단 영역에 일정의 세부 내용이 표시된다. |
+
+## 15) Writing Post
 
 | Actor | Description |
 |------|-------------|
 | TeamMember, TeamLeader | 팀페이지에서 글을 작성할 수 있다. |
 
-## 15) Viewing Post
+## 16) Viewing Post
 
 | Actor | Description |
 |------|-------------|
 | RegisteredUser, TeamMember, TeamLeader | 다른 사용자가 작성한 팀게시글을 확인하여 팀 활동과 관련된 정보를 조회한다. |
 
-## 16) Writing Comment
+## 17) Writing Comment
 
 | Actor | Description |
 |------|-------------|
 | TeamMember, TeamLeader | 팀 게시글 하단에 댓글을 작성하여 팀원 간 의견을 공유하고 의사소통을 수행한다. |
 
-## 17) Exporting Data
+## 18) Exporting Data
 
 | Actor | Description |
 |------|-------------|
 | TeamLeader | 팀 신청 명단, 투표 결과등을 csv 파일 형식으로 다운로드 받을 수 있다. |
 
-## 18) Modifying Recruit Post
+## 19) Modifying Recruit Post
 
 | Actor | Description |
 |------|-------------|
 | TeamLeader | TeamLeader가 작성한 팀원 모집글을 수정한다. |
 
-## 19) Deleting Recruit Post
+## 20) Deleting Recruit Post
 
 | Actor | Description |
 |------|-------------|
 | TeamLeader | TeamLeader가 작성한 팀원 모집글을 삭제한다. |
 
-## 20) Modifying Post
+## 21) Modifying Post
 
 | Actor | Description |
 |------|-------------|
 | TeamMember, TeamLeader | 팀 게시글을 수정한다. |
 
-## 21) Deleting Post
+## 22) Deleting Post
 
 | Actor | Description |
 |------|-------------|
 | TeamMember, TeamLeader | 팀 게시글을 삭제한다. |
-## 22) Deleting Vote
+
+## 23) Deleting Vote
 
 | Actor | Description |
 |------|-------------|
 | TeamLeader | TeamLeader가 투표를 삭제한다. |
 
-## 23) Deleting Schedule
+## 24) Deleting Schedule
 
 | Actor | Description |
 |------|-------------|
 | TeamLeader | TeamLeader가 등록된 일정을 삭제한다. |
 
-## 24) Deleting Comment 
+## 25) Deleting Comment 
 
 | Actor | Description |
 |------|-------------|
 | TeamMember, TeamLeader | 팀 게시글에 작성된 댓글을 삭제한다. |
 
-## 25) Deleting Team
+## 26) Deleting Team
 
 | Actor | Description |
 |------|-------------|
@@ -358,7 +369,16 @@ Creation Time
 | Dynamics | TeamLeader가 일정을 등록할 경우 |
 | Goals | TeamMember들이 일정을 한눈에 확인할 수 있다. |
 
-## 14) Writing Post
+## 14) Viewing Schedule
+
+| 항목 | 내용 |
+|------|------|
+| Purpose | TeamUser가 팀의 일정 정보를 직관적으로 확인하고, 특정 일정의 상세 내용을 파악할 수 있도록 한다. |
+| Approach | TeamUser는 팀 페이지의 캘린더 또는 일정 목록에서 특정 날짜나 일정을 선택한다. 시스템은 해당 일정의 상세 정보를 하단 영역에 표시하며, 선택된 일정은 강조 상태로 표시한다. |
+| Dynamics | TeamUser가 일정이 표시된 날짜 또는 일정 항목을 클릭할 경우 |
+| Goals | TeamUser가 특정 일정의 세부 내용을 쉽게 확인할 수 있다. |
+
+## 15) Writing Post
 
 | 항목 | 내용 |
 |------|------|
@@ -367,7 +387,7 @@ Creation Time
 | Dynamics | TeamMember, TeamLeader가 팀 페이진에서 게시글을 작성할 경우 |
 | Goals | 게시글을 통하여 진행에 필요한 정보를 공유하거나 TeamLeader가 공지를 남길 수 있다. |
 
-## 15) Viewing Post
+## 16) Viewing Post
 
 | 항목 | 내용 |
 |------|------|
@@ -376,7 +396,7 @@ Creation Time
 | Dynamics | 사용자가 게시글을 선택할 경우 |
 | Goals    | 사용자가 게시글을 통해 필요한 정보를 확인할 수 있다. |
 
-## 16) Writing Comment
+## 17) Writing Comment
 
 | 항목 | 내용 |
 |------|------|
@@ -385,7 +405,7 @@ Creation Time
 | Dynamics | RegisteredUser, TeamMember, TeamLeader가 게시글에 댓글을 작성후 등록 버튼을 누를시 |
 | Goals    | 게시글을 기반으로 사용자 간 의사소통이 이루어진다. |
 
-## 17) Exporting Data
+## 18) Exporting Data
 
 | 항목 | 내용 |
 |------|------|
@@ -394,7 +414,7 @@ Creation Time
 | Dynamics | TeamLeader가 데이터 다운로드 버튼을 누를 경우 |
 | Goals | Team 정보가 필요할 때 내려받아 추가적인 작업을 진행할 수 있다. 해당 기능은 다른 정보도 내낼 수 있는 기반이 된다. |
 
-## 18) Modifying Recruit Post
+## 19) Modifying Recruit Post
 
 | 항목 | 내용 |
 |------|------|
@@ -403,7 +423,7 @@ Creation Time
 | Dynamics | TeamLeader가 모집글 수정 기능을 선택할 경우 |
 | Goals | 모집글의 내용이 최신 정보로 갱신된다. |
 
-## 19) Deleting Recruit Post
+## 20) Deleting Recruit Post
 
 | 항목 | 내용 |
 |------|------|
@@ -413,7 +433,7 @@ Creation Time
 | Goals | 더 이상 필요하지 않은 모집글이 게시판에서 제거된다. |
 
 
-## 20) Modifying Post
+## 21) Modifying Post
 
 | 항목 | 내용 |
 |------|------|
@@ -422,7 +442,7 @@ Creation Time
 | Dynamics | TeamMember, TeamLeader가 게시글 수정 기능을 선택할 경우 |
 | Goals | 팀 게시글의 내용이 최신 상태로 유지된다. |
 
-## 21) Deleting Post
+## 22) Deleting Post
 
 | 항목 | 내용 |
 |------|------|
@@ -431,7 +451,7 @@ Creation Time
 | Dynamics | TeamMember, TeamLeader가 게시글 삭제 기능을 선택할 경우 |
 | Goals | 더 이상 필요하지 않은 팀 게시글이 게시판에서 제거된다. |
 
-## 22) Deleting Vote
+## 23) Deleting Vote
 
 | 항목 | 내용 |
 |------|------|
@@ -440,7 +460,7 @@ Creation Time
 | Dynamics | TeamLeader가 투표 삭제 기능을 선택할 경우 |
 | Goals | 더 이상 사용하지 않는 투표가 목록에서 제거된다. |
 
-## 23) Deleting Schedule
+## 24) Deleting Schedule
 
 | 항목 | 내용 |
 |------|------|
@@ -449,7 +469,7 @@ Creation Time
 | Dynamics | TeamLeader가 일정 삭제 기능을 선택할 경우 |
 | Goals | 더 이상 필요하지 않은 일정이 캘린더와 일정 목록에서 제거된다. |
 
-## 24) Deleting Comment
+## 25) Deleting Comment
 
 | 항목 | 내용 |
 |------|------|
@@ -458,7 +478,7 @@ Creation Time
 | Dynamics | TeamMember, TeamLeader가 댓글 삭제 기능을 선택할 경우 |
 | Goals | 불필요하거나 부적절한 댓글이 제거되어 게시글의 내용이 정리된다. |
 
-## 25) Deleting Team
+## 26) Deleting Team
 
 | 항목 | 내용 |
 |------|------|
@@ -466,6 +486,10 @@ Creation Time
 | Approach | TeamLeader는 팀 해체를 요청하고 확인 절차를 거쳐 팀과 관련 데이터를 삭제한다. |
 | Dynamics | TeamLeader가 팀 해체 기능을 선택할 경우 |
 | Goals | 더 이상 사용하지 않는 팀이 시스템에서 제거된다. |
+
+
+---
+
 
 # 5. Problem Statement
 
