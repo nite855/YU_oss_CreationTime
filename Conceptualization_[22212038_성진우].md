@@ -22,6 +22,7 @@ Creation Time
 | 2026.05.01 | 1.3.0 | use case 수정 및 삭제, 수정 use case 추가 | 성진우 |
 | 2026.05.03 | 1.4.0 | use case 수정 | 성진우 |
 | 2026.05.14 | 1.5.0 | Viewing Schedule 추가 | 성진우 |  
+| 2026.05.20 | 1.6.0 | Starting Recruitment, Closing Recruitment 추가 | 성진우 | 
 ---
 
 ## Contents
@@ -53,7 +54,7 @@ Creation Time
 
 # 2. System Context Diagram
 
-<img width="952" height="707" alt="image" src="https://github.com/user-attachments/assets/d91a7628-8431-4c44-9c31-e8da59677bc0" />
+<img width="1123" height="727" alt="image" src="https://github.com/user-attachments/assets/db9f7cdf-888c-4a7b-9759-e6e35c9a9fa8" />
 
 ## 기능 목록 
 
@@ -76,6 +77,7 @@ Creation Time
 | Writing Post | 팀 게시글 작성 |
 | Viewing Post | 팀 게시글 확인 |
 | Writing Comment | 팀 게시글에 댓글 작성 |
+| Exporting Data | 엑셀로 데이터 내보내기 |
 | Modifying Recruit Post | 팀원모집글 수정 |
 | Deleting Recruit Post | 팀원모집글 삭제 |
 | Deleting Post | 팀 게시글 삭제 |
@@ -83,9 +85,12 @@ Creation Time
 | Deleting Schedule | 일정 삭제 |
 | Deleting Comment | 팀 게시글의 댓글 삭제 |
 | Deleting Team | 팀 해체 |
-| Exporting Data | 엑셀로 데이터 내보내기 |
+| Starting Recruitment |	팀원 모집 시작 |
+| Closing Recruitment |	팀원 모집 중단 |
+
 
 ---
+
 
 # 3. Use Case List
 
@@ -248,6 +253,17 @@ Creation Time
 |------|-------------|
 | TeamLeader | TeamLeader가 팀을 해체한다. |
 
+## 27) Starting Recruitment
+
+| Actor | Description |
+|------|-------------|
+| TeamLeader | RecruitPost를 게시하며 모집을 시작한다. |
+
+### 28) Closing Recruitment
+| Actor | Description |
+|------|-------------|
+| TeamLeader | TeamLeader가 모집을 중단한다. |
+
 
 ---
 
@@ -403,7 +419,7 @@ Creation Time
 | Purpose  | RegisteredUser TeamMember, TeamLeader가 게시글에 댓글을 작성하여 의견을 공유할 수 있도록 한다. |
 | Approach | RegisteredUser,TeamMember, TeamLeader는 게시글 하단의 입력창에 댓글을 작성하고 등록 버튼을 통해 의견을 남긴다. |
 | Dynamics | RegisteredUser, TeamMember, TeamLeader가 게시글에 댓글을 작성후 등록 버튼을 누를시 |
-| Goals    | 게시글을 기반으로 사용자 간 의사소통이 이루어진다. |
+| Goals | 게시글을 기반으로 사용자 간 의사소통이 이루어진다. |
 
 ## 18) Exporting Data
 
@@ -486,6 +502,24 @@ Creation Time
 | Approach | TeamLeader는 팀 해체를 요청하고 확인 절차를 거쳐 팀과 관련 데이터를 삭제한다. |
 | Dynamics | TeamLeader가 팀 해체 기능을 선택할 경우 |
 | Goals | 더 이상 사용하지 않는 팀이 시스템에서 제거된다. |
+
+### 27) Starting Recruitment
+
+| 항목 | 내용 |
+|------|------|
+| Purpose | TeamLeader가 RecruitPost을 게시판에 노출시키고 팀원 모집을 시작할 수 있도록 한다. |
+| Approach | TeamLeader가 RecruitPost를 모집 중으로 전환하고 RecruitPost게시판에 노출한다. |
+| Dynamics | TeamLeader가 모집 시작 기능을 선택할 경우|
+| Goals | 팀원 모집을 공식적으로 시작하고, 다른 사용자가 모집글을 확인할 수 있게 한다. |
+
+### 28) Closing Recruitment
+
+| 항목 | 내용 |
+|------|------|
+| Purpose | TeamLeader가 모집을 중단하고 더 이상 게시판에 노출되지 않도록 한다. |
+| Approach | TeamLeader가 모집을 중단하고 RecruitPost를 종료 상태로 전환, 모집 게시판에서 보이지 않도록 한다. |
+| Dynamics | Team이 모두 형성되었거나 TeamLeader가 추가모집이 필요 없다고 판단한 경우 |
+| Goals | 모집을 멈추고, 다시 시작할 수 있는 상태를 유지한다. |
 
 
 ---
