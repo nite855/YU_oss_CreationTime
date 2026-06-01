@@ -23,6 +23,7 @@ Creation Time
 | 2026.05.03 | 1.4.0 | use case 수정 | 성진우 |
 | 2026.05.14 | 1.5.0 | Viewing Schedule 추가 | 성진우 |  
 | 2026.05.20 | 1.6.0 | Starting Recruitment, Closing Recruitment 추가 | 성진우 | 
+| 2026.06.01 | 1.7.0 | Deleting RecruitPost 삭제 | 성진우 | 
 ---
 
 ## Contents
@@ -79,7 +80,7 @@ Creation Time
 | Writing Comment | 팀 게시글에 댓글 작성 |
 | Exporting Data | 엑셀로 데이터 내보내기 |
 | Modifying Recruit Post | 팀원모집글 수정 |
-| Deleting Recruit Post | 팀원모집글 삭제 |
+| Modifying Post | 팀 게시글 수정 |
 | Deleting Post | 팀 게시글 삭제 |
 | Deleting Vote | 투표 삭제 |
 | Deleting Schedule | 일정 삭제 |
@@ -211,55 +212,49 @@ Creation Time
 |------|-------------|
 | TeamLeader | TeamLeader가 작성한 팀원 모집글을 수정한다. |
 
-## 20) Deleting Recruit Post
-
-| Actor | Description |
-|------|-------------|
-| TeamLeader | TeamLeader가 작성한 팀원 모집글을 삭제한다. |
-
-## 21) Modifying Post
+## 20) Modifying Post
 
 | Actor | Description |
 |------|-------------|
 | TeamMember, TeamLeader | 팀 게시글을 수정한다. |
 
-## 22) Deleting Post
+## 21) Deleting Post
 
 | Actor | Description |
 |------|-------------|
 | TeamMember, TeamLeader | 팀 게시글을 삭제한다. |
 
-## 23) Deleting Vote
+## 22) Deleting Vote
 
 | Actor | Description |
 |------|-------------|
 | TeamLeader | TeamLeader가 투표를 삭제한다. |
 
-## 24) Deleting Schedule
+## 23) Deleting Schedule
 
 | Actor | Description |
 |------|-------------|
 | TeamLeader | TeamLeader가 등록된 일정을 삭제한다. |
 
-## 25) Deleting Comment 
+## 24) Deleting Comment 
 
 | Actor | Description |
 |------|-------------|
 | TeamMember, TeamLeader | 팀 게시글에 작성된 댓글을 삭제한다. |
 
-## 26) Deleting Team
+## 25) Deleting Team
 
 | Actor | Description |
 |------|-------------|
 | TeamLeader | TeamLeader가 팀을 해체한다. |
 
-## 27) Starting Recruitment
+## 26) Starting Recruitment
 
 | Actor | Description |
 |------|-------------|
 | TeamLeader | RecruitPost를 게시하며 모집을 시작한다. |
 
-### 28) Closing Recruitment
+### 27) Closing Recruitment
 | Actor | Description |
 |------|-------------|
 | TeamLeader | TeamLeader가 모집을 중단한다. |
@@ -439,17 +434,7 @@ Creation Time
 | Dynamics | TeamLeader가 모집글 수정 기능을 선택할 경우 |
 | Goals | 모집글의 내용이 최신 정보로 갱신된다. |
 
-## 20) Deleting Recruit Post
-
-| 항목 | 내용 |
-|------|------|
-| Purpose | TeamLeader가 팀원 모집글을 삭제할 수 있도록 한다. |
-| Approach | TeamLeader는 삭제할 모집글을 선택하고 삭제를 요청하여 게시글을 제거한다. |
-| Dynamics | TeamLeader가 모집글 삭제 기능을 선택할 경우 |
-| Goals | 더 이상 필요하지 않은 모집글이 게시판에서 제거된다. |
-
-
-## 21) Modifying Post
+## 20) Modifying Post
 
 | 항목 | 내용 |
 |------|------|
@@ -458,7 +443,7 @@ Creation Time
 | Dynamics | TeamMember, TeamLeader가 게시글 수정 기능을 선택할 경우 |
 | Goals | 팀 게시글의 내용이 최신 상태로 유지된다. |
 
-## 22) Deleting Post
+## 21) Deleting Post
 
 | 항목 | 내용 |
 |------|------|
@@ -467,7 +452,7 @@ Creation Time
 | Dynamics | TeamMember, TeamLeader가 게시글 삭제 기능을 선택할 경우 |
 | Goals | 더 이상 필요하지 않은 팀 게시글이 게시판에서 제거된다. |
 
-## 23) Deleting Vote
+## 22) Deleting Vote
 
 | 항목 | 내용 |
 |------|------|
@@ -476,7 +461,7 @@ Creation Time
 | Dynamics | TeamLeader가 투표 삭제 기능을 선택할 경우 |
 | Goals | 더 이상 사용하지 않는 투표가 목록에서 제거된다. |
 
-## 24) Deleting Schedule
+## 23) Deleting Schedule
 
 | 항목 | 내용 |
 |------|------|
@@ -485,7 +470,7 @@ Creation Time
 | Dynamics | TeamLeader가 일정 삭제 기능을 선택할 경우 |
 | Goals | 더 이상 필요하지 않은 일정이 캘린더와 일정 목록에서 제거된다. |
 
-## 25) Deleting Comment
+## 24) Deleting Comment
 
 | 항목 | 내용 |
 |------|------|
@@ -494,7 +479,7 @@ Creation Time
 | Dynamics | TeamMember, TeamLeader가 댓글 삭제 기능을 선택할 경우 |
 | Goals | 불필요하거나 부적절한 댓글이 제거되어 게시글의 내용이 정리된다. |
 
-## 26) Deleting Team
+## 25) Deleting Team
 
 | 항목 | 내용 |
 |------|------|
@@ -503,7 +488,7 @@ Creation Time
 | Dynamics | TeamLeader가 팀 해체 기능을 선택할 경우 |
 | Goals | 더 이상 사용하지 않는 팀이 시스템에서 제거된다. |
 
-### 27) Starting Recruitment
+### 26) Starting Recruitment
 
 | 항목 | 내용 |
 |------|------|
@@ -512,7 +497,7 @@ Creation Time
 | Dynamics | TeamLeader가 모집 시작 기능을 선택할 경우|
 | Goals | 팀원 모집을 공식적으로 시작하고, 다른 사용자가 모집글을 확인할 수 있게 한다. |
 
-### 28) Closing Recruitment
+### 27) Closing Recruitment
 
 | 항목 | 내용 |
 |------|------|
