@@ -55,7 +55,7 @@ Creation Time
 
 # 2. System Context Diagram
 
-<img width="1123" height="727" alt="image" src="https://github.com/user-attachments/assets/db9f7cdf-888c-4a7b-9759-e6e35c9a9fa8" />
+<img width="920" height="696" alt="image" src="https://github.com/user-attachments/assets/a7b19e5c-163a-4840-9adc-165bb1b73433" />
 
 ## 기능 목록 
 
